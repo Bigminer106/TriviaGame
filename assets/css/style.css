@@ -1,1 +1,7 @@
-/* Add background styling to body */
+body {
+  background:url('../images/footer_lodyas.png');
+}
+
+#title {
+  color: ghostwhite;
+}
