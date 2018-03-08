@@ -11,19 +11,16 @@
   <script src="./assets/javascript/app.js"></script>
 </head>
 <body>
-  <!-- Add container div -->
-  <div class="container">
-    <!-- Add title -->
-    <h1 id="title">Totally Awesome Trivia!!</h1>
-    <!-- Add timer div -->
-    <div id="timer">
-      <!-- Add Start button that starts timer and game -->
-    </div>
-    <!-- Add game div -->
-    <div id="game">
-      <!-- Append Question/Answers/Images -->
-      <div id="QA"></div>
-    </div>
-  </div>
+  <header>
+    <h1 class="container">Movie Trivia</h1>
+    <h5>Score: <span id="score">0</span>/10</h5>
+    <a href="index.html">
+      <button type="button" class="Reset">Reset</button>
+    </a>
+  </header><br>
+  <div>Time Remaining: <span id="timer"></span></div>
+  <main id="card"></main>
+  <div id="buttons"></div>
+  <div id="right-wrong"></div>
 </body>
 </html>
