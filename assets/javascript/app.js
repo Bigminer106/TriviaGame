@@ -1,8 +1,34 @@
 $(document).ready(() => {
   var score = 0;
-  var timer = setTimeout(() => {
-    alert(`Game Over!  Score: ${score}/10`)
-  }, 60000);
+
+  // function startTimer(duration, display) {
+  //   var timer = duration, minutes, seconds;
+  //   setInterval(() => {
+  //     minutes = parseInt(timer /60, 10);
+  //     seconds = parseInt(timer % 60, 10);
+
+  //     minutes = minutes < 10 ? '0' + minutes : minutes;
+  //     seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  //     display.text(minutes + ':' + seconds + ' seconds');
+
+  //     if (--timer < 0) {
+  //       timer = duration;
+  //     }
+  //   }, 6000);
+  // };
+
+  // jQuery(function ($) {
+  //   var oneMinute = 60 * 1,
+  //     display = $('#timer');
+  //   startTimer(oneMinute, display);
+  // });
+
+  function timeStop() {
+    clearTimeout(timer);
+    alert(`Game Over!  Score: ${score}/10`);
+  };
+
   $('.correct1').on('click', () => {
     $('.correct1').css('background-color', 'green');
     score++;
@@ -51,6 +77,7 @@ $(document).ready(() => {
   $('.correct10').on('click', () => {
     score++;
     $('.correct10').css('background-color', 'green');
+    timeStop();
   });
 
   $('.incorrect1').on('click', () => {
@@ -101,6 +128,7 @@ $(document).ready(() => {
   $('.incorrect10').on('click', () => {
     $('.incorrect10').css('background-color', 'red');
     $('.correct10').css('background-color', 'green');
+    timeStop();
   });
 
 });
