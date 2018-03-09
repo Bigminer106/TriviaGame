@@ -1,6 +1,8 @@
 $(document).ready(() => {
   var score = 0;
-
+  var timer = setTimeout(() => {
+    alert(`Game Over!  Score: ${score}/10`)
+  }, 60000);
   $('.correct1').on('click', () => {
     $('.correct1').css('background-color', 'green');
     score++;
