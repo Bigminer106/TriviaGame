@@ -118,6 +118,8 @@ $(document).ready(() => {
       lastCorrectClicked = true;
 
       $('.correct10').css('background-color', 'green');
+
+      alert('TRICK QUESTION!!  Both Sauron and Morgoth are Dark Lords of Mordor.');
     });
   };
 
